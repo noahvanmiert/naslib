@@ -1,6 +1,8 @@
 segment .text
 global _start
 
+%include "string/string.asm"
+
 _start:
 	mov rax, 1
 	mov rdi, 1
