@@ -21,6 +21,9 @@ naslib_write:
 ;; print - Prints a buffer to stdout;
 ;; rsi - Buffer
 naslib_print:
+	push rbp
+	mov rbp, rsp
+
 	mov rbx, rsi
 	mov rax, rsi
 	call naslib_strlen
@@ -30,6 +33,8 @@ naslib_print:
 	mov rdi, 1
 	mov rsi, rbx
 	syscall
+
+	pop rbp
 	ret
 
 

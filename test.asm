@@ -2,11 +2,9 @@ segment .text
 global _start
 
 %include "syscall/syscalls.asm"
+%include "math/math.asm"
 
 _start:
-	mov rsi, msg
-	call naslib_print
-
 	mov rdi, 0
 	call naslib_exit
 
