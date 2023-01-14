@@ -33,4 +33,12 @@ naslib_print:
 	ret
 
 
+;; exit - Stops the program
+;; rdi - Exit code
+naslib_exit:
+	mov rax, 60
+	syscall
+	ret
+
+
 %endif ;; __NASLIB_SYSCALLS__

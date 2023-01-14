@@ -7,9 +7,8 @@ _start:
 	mov rsi, msg
 	call naslib_print
 
-	mov rax, 60
 	mov rdi, 0
-	syscall
+	call naslib_exit
 
 segment .data
 msg: db "Hello, World", 0xa
