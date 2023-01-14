@@ -16,3 +16,4 @@ _start:
 
 segment .data
 msg: db "Hello, World", 0xa
+
