@@ -1,14 +1,11 @@
 segment .text
 global _start
 
-%include "string/string.asm"
+%include "syscall/syscalls.asm"
 
 _start:
-	mov rax, 1
-	mov rdi, 1
 	mov rsi, msg
-	mov rdx, 13
-	syscall
+	call naslib_print
 
 	mov rax, 60
 	mov rdi, 0
